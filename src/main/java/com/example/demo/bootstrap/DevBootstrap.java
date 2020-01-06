@@ -6,7 +6,6 @@ import com.example.demo.model.Publisher;
 import com.example.demo.repositories.AuthorRepository;
 import com.example.demo.repositories.BookRepository;
 import com.example.demo.repositories.PublisherRepository;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -48,6 +47,6 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        initData();
+//        initData();
     }
 }
