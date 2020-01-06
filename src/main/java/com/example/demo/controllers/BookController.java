@@ -1,11 +1,9 @@
 package com.example.demo.controllers;
 
-import com.example.demo.model.Book;
 import com.example.demo.repositories.BookRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BookController {
@@ -15,7 +13,7 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
-    @RequestMapping("/books")
+    @GetMapping("/books")
     public String getBooks(Model model) {
         model.addAttribute("books", bookRepository.findAll());
         return "books";
